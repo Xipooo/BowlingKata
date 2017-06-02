@@ -31,21 +31,9 @@ namespace BowlingKata.Features.CalculateBowlingGame
             return totalScore;
         }
 
-        public void AddRoll(int pins)
-        {
-            rolls.Add(pins);
-        }
+        public void AddRoll(int pins) => rolls.Add(pins);
 
-        private int GetRoll(int index)
-        {
-            if (index >= rolls.Count)
-            {
-                return 0;
-            }
-            else
-            {
-                return rolls[index];
-            }
-        }
+
+        private int GetRoll(int index) => (index >= rolls.Count ? 0 : rolls[index]);
     }
 }
