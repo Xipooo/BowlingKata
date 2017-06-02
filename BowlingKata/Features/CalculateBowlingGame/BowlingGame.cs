@@ -38,13 +38,13 @@ namespace BowlingKata.Features.CalculateBowlingGame
 
         private int GetRoll(int index)
         {
-            try
-            {
-                return rolls[index];
-            }
-            catch (Exception)
+            if (index >= rolls.Count)
             {
                 return 0;
+            }
+            else
+            {
+                return rolls[index];
             }
         }
     }
